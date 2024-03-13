@@ -34,7 +34,7 @@ function Products() {
     const sorted = [...sortedProducts].sort((a, b) => b.price - a.price);
     setSortedProducts(sorted);
   };
-
+       
   const sortAscendingTitle = () => {
     const sorted = [...sortedProducts].sort((a, b) => a.title.localeCompare(b.title));
     setSortedProducts(sorted);
