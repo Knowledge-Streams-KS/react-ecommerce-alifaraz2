@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -60,14 +61,16 @@ function Products() {
       <div>
         {sortedProducts.map(product => (
           <div key={product.id}>
-            <h3>{product.title}</h3>
+            <h3><Link to={`/products/${product.id}`}>{product.title}</Link></h3> {/* Wrap title in Link */}
             <p>{product.description}</p>
             <p>Price: ${product.price}</p>
             {/* Add more product details as needed */}
           </div>
         ))}
       </div>
+
     </div>
+    
   );
 }
 
