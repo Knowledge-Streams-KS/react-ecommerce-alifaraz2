@@ -32,7 +32,6 @@ const ProductDetails = () => {
       {product ? (
         <>
           <h1>Product Name: {product.title}</h1>
-          {/* Display more product details */}
           <p>Description: {product.description}</p>
           <p>Price: ${product.price}</p>
           <label>
