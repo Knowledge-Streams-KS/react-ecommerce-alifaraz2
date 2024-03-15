@@ -16,7 +16,7 @@ function Products() {
         setProducts(response.data)
         setSortedProducts(response.data)
       } else {
-        const response = await axios.get("https://fakestoreapi.com/products")
+        const response = await axios.get('https://fakestoreapi.com/products')
         setProducts(response.data)
         setSortedProducts(response.data)
       }
@@ -27,7 +27,7 @@ function Products() {
 
   useEffect(() => {
     fetchData()
-  }, [categoryName])
+  }, [])
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value)
