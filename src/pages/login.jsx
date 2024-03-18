@@ -12,7 +12,9 @@ const LoginSchema = Yup.object().shape({
 
 const Login = () => {
   const handleLogin = (values) => {
-    // Perform login logic with form values
+    setEmail(values.email)
+    setIsLoggedIn(true)
+    navigate("/")
     console.log(values)
   }
 
@@ -21,7 +23,7 @@ const Login = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Login Page</h1>
+      <h1>Login Page</h1>
       <Formik
         initialValues={{ email: "", password: "" }}
         validationSchema={LoginSchema}
@@ -31,7 +33,7 @@ const Login = () => {
           <Form>
             <div>
               <label htmlFor="email">Email:</label>
-              <Field type="email" id="email" name="email"  />
+              <Field type="email" id="email" name="email" />
               <ErrorMessage name="email" component="div" className="error" />
             </div>
             <div>
@@ -39,14 +41,7 @@ const Login = () => {
               <Field type="password" id="password" name="password" />
               <ErrorMessage name="password" component="div" className="error" />
             </div>
-            <button
-              onClick={() => {
-                setIsLoggedIn(true)
-                navigate("/")
-              }}
-            >
-              Login
-            </button>
+            <button type="submit">Login</button>
           </Form>
         )}
       </Formik>

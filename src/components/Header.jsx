@@ -12,7 +12,7 @@ const Header = () => {
       <p>{email}</p>
     </>
   
-  );
+  ); 
 };
 
 export default Header;

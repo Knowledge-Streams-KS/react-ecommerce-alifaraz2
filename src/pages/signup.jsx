@@ -26,7 +26,7 @@ const Signup = () => {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">Signup Page</h1>
+      <h1>Signup Page</h1>
       <Formik
         initialValues={{
           name: "",
