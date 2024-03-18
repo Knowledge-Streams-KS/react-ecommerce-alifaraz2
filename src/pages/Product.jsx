@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-import { Link, useParams } from "react-router-dom"
+import { Link, Navigate, useParams } from "react-router-dom"
+
 
 function Products() {
   const [products, setProducts] = useState([])
@@ -78,6 +79,7 @@ function Products() {
           sortedProducts.map((product) => (
             <div key={product.id}>
               <Link to={`/products-Detailed/${product.id}`}>
+                
                 <p>{product.title}</p>
               </Link>
             </div>
